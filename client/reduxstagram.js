@@ -13,13 +13,15 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 //Import dependencies for react-redux
 import { Provider } from 'react-redux'; //expose the store to the app
 import store, { history } from './store';
+import App from './components/App';
 
 //Router of the app
 const router = (
     <Provider store={store}>
     <Router history={history}>
     {/* <Router history={browserHistory}> */}
-        <Route path='/' component={Main}>
+        {/* <Route path='/' component={Main}> */}
+        <Route path='/' component={App}>
             <IndexRoute component={PhotoGrid}></IndexRoute>
             <Route path='/view/:postId' component={Single}></Route>
         </Route>

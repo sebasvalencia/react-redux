@@ -7,6 +7,7 @@
 //update and return  store
 
 function posts(state = [], action) {
+  console.log('the post will change');
   console.log('postsReducers: ', state, action);
   return state;
 }
