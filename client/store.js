@@ -18,6 +18,12 @@ const defaultState = {
   comments
 };
 
+// redux dev tools
+const enhancers = compose(
+  window.devToolsExtension ? window.devToolsExtension() : (f) => f
+);
+
+
 //Create store (reducers, defaultState)
 const store = createStore(rootReducer, defaultState);
 
